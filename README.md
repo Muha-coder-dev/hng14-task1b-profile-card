@@ -1,10 +1,10 @@
-# HNG 14 Stage 1B - Profile Card
+# HNG 14 Task 1B - Profile Card
 
 A clean, responsive, and accessible Profile Card built for Stage 1B of the HNG 14 Internship. 
 
-[Github Link](https://github.com/Muha-coder-dev/hng14-stage1b-profile-card)
+[Github Link](https://github.com/Muha-coder-dev/hng14-task1b-profile-card)
 
-[Github Pages Link](https://muha-coder-dev.github.io/hng14-stage1b-profile-card/)
+[Github Pages Link](https://muha-coder-dev.github.io/hng14-task1b-profile-card/)
 
 ## Overview
 This is a straightforward profile card component. The main focus was hitting the strict automated testing requirements while keeping the markup completely semantic and accessible. I went with a light, high-contrast theme so the avatar and text remain easy to read and pass WCAG AA standards.
