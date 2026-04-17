@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG 14 Stage 1B - Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <main class="container">
+        <article class="profile-card" data-testid="test-profile-card">
+            
+            <figure class="profile-avatar-container">
+                <img 
+                    src="./images/Muhammad.jpg" 
+                    alt="Headshot of Muhammad" 
+                    class="avatar-img" 
+                    data-testid="test-user-avatar"
+                >
+            </figure>
+
+            <div class="profile-info">
+                <header class="profile-header">
+                    <h1 class="name" data-testid="test-user-name">Muhammad Salisu</h1>
+                    <p class="title">Electrical & Electronics Engineering Student | Frontend Developer</p>
+                </header>
+
+                <p class="bio" data-testid="test-user-bio">
+                    I am an engineering student with a deep focus on frontend development and AI-powered agricultural technology. Currently, I volunteer as a mentor with the Reformers Squad, providing tutorials to help secondary and university students excel.
+                </p>
+
+                <div class="time-container" aria-live="polite">
+                    <span class="time-label">Current Epoch Time: </span>
+                    <span class="time-value" data-testid="test-user-time">Loading...</span>
+                </div>
+
+                <nav class="social-nav" aria-label="Social media links">
+                    <ul class="social-links" data-testid="test-user-social-links">
+                        <li>
+                            <a href="https://github.com/Muha-coder-dev" target="_blank" rel="noopener noreferrer" class="social-btn" data-testid="test-user-social-github">
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/desgnbymuhammad?t=1BYCeOCrtVzVdp-avAaOCg&s=09" target="_blank" rel="noopener noreferrer" class="social-btn" data-testid="test-user-social-twitter">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/muhammad-salisu-b0a4422b4" target="_blank" rel="noopener noreferrer" class="social-btn" data-testid="test-user-social-linkedin">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="details-grid">
+                    <section class="details-section">
+                        <h2>Hobbies</h2>
+                        <ul class="details-list" data-testid="test-user-hobbies">
+                            <li>Coding & UI Design</li>
+                            <li>Mentoring Students</li>
+                            <li>Building Hardware Circuits</li>
+                        </ul>
+                    </section>
+
+                    <section class="details-section">
+                        <h2>Dislikes</h2>
+                        <ul class="details-list" data-testid="test-user-dislikes">
+                            <li>Spaghetti Code</li>
+                            <li>Micro-management</li>
+                            <li>Unresponsive UI</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

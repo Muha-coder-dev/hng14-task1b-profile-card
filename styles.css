@@ -1,0 +1,207 @@
+/* ==========================================
+   1. CSS Variables & Reset
+   ========================================= */
+:root {
+    --bg-main: #f4f4f5;
+    --card-bg: #ffffff;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-color: #e4e4e7;
+    --focus-ring: #60a5fa;
+    --radius: 12px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. Layout & Card Container
+   ========================================= */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 850px;
+    padding: 32px;
+    
+    /* Default mobile stack */
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Desktop Layout Override */
+@media (min-width: 768px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 40px;
+        gap: 40px;
+    }
+}
+
+/* ==========================================
+   3. Avatar Styling
+   ========================================= */
+.profile-avatar-container {
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 0 0 2px var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .profile-avatar-container {
+        align-self: flex-start;
+    }
+    .avatar-img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ==========================================
+   4. Typography & Info Section
+   ========================================= */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.profile-header .name {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+.profile-header .title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-top: 4px;
+}
+
+.bio {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* ==========================================
+   5. Time Indicator
+   ========================================= */
+.time-container {
+    background: var(--bg-main);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+}
+
+.time-label {
+    color: var(--text-secondary);
+}
+
+.time-value {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* ==========================================
+   6. Navigation & Social Links
+   ========================================= */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background: var(--bg-main);
+    border-color: var(--text-secondary);
+}
+
+/* A11y Requirement: Visible Focus States */
+.social-btn:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   7. Details Grid (Hobbies / Dislikes)
+   ========================================= */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 8px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+}
+
+@media (min-width: 640px) {
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.details-section h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.details-list {
+    list-style-position: inside;
+    color: var(--text-secondary);
+}
+
+.details-list li {
+    margin-bottom: 6px;
+}
